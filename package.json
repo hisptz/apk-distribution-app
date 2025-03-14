@@ -7,7 +7,7 @@
     "private": true,
     "scripts": {
         "build": "d2-app-scripts build",
-        "start": "d2-app-scripts start",
+        "start": "dotenv -- cross-var d2-app-scripts start --proxy %DHIS2_PROXY_URL%",
         "test": "d2-app-scripts test",
         "deploy": "d2-app-scripts deploy",
         "lint": "d2-style check",
@@ -15,10 +15,14 @@
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^10.3.9",
-        "@dhis2/cli-style": "^10.5.1"
+        "@dhis2/cli-style": "^10.5.1",
+        "cross-var": "^1.1.0",
+        "dotenv": "^16.4.7",
+        "dotenv-cli": "^8.0.0"
     },
     "dependencies": {
         "@dhis2/app-runtime": "^3.6.1",
         "@dhis2/d2-i18n": "^1.1.1"
-    }
+    },
+    "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

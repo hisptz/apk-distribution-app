@@ -54,7 +54,7 @@ export const ApkList = () => {
                 <CircularLoader />
             ) : (
                 <div className={styles.container}>
-                    <HeaderContent text={i18n.t('Android Capture app')} />
+                    <HeaderContent text={i18n.t('TimR Mobile App')} />
                     <Divider />
                     <AboutSection
                         latest={currentVersion}

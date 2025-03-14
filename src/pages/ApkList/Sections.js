@@ -3,25 +3,25 @@ import classnames from 'classnames'
 import isEmpty from 'lodash/isEmpty'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Figure } from '../../components'
-import { UploadApkButton } from '../UploadApk'
+import {Figure} from '../../components'
+import {UploadApkButton} from '../UploadApk'
 import styles from './ApkList.module.css'
-import { LatestDownloadButton } from './LatestDownloadButton'
+import {LatestDownloadButton} from './LatestDownloadButton'
 
 export const AboutSection = ({
-    latest,
-    updateVersion,
-    versions,
-    handleList,
-    disabled,
-}) => (
+                                 latest,
+                                 updateVersion,
+                                 versions,
+                                 handleList,
+                                 disabled,
+                             }) => (
     <section className={classnames(styles.appCardSection, styles.aboutSection)}>
         <div>
             <h2 className={styles.appCardHeading}>{i18n.t('Description')}</h2>
             <div className={styles.appCardParagraph}>
                 <p>
                     {i18n.t(
-                        'New generation of DHIS2 Android Apps for data sets, events and tracker data capture. Configurable feel and look, easier login and enhanced data protection, attractive and user friendly navigation. Search/registration integrated for tracker, improved tracker dashboard, pictorial data entry for events, event completeness information, and many more.'
+                        "The Tanzania Immunization Registry (TIMR) is a cutting-edge digital system developed using DHIS2, designed to streamline and enhance the management of immunization data across Tanzania. By leveraging the robust capabilities of DHIS2, TIMR ensures the accurate collection, storage, and analysis of immunization-related information, which is vital for effective health service delivery and decision-making."
                     )}
                 </p>
                 <p>
@@ -33,10 +33,10 @@ export const AboutSection = ({
         </div>
 
         <div>
-            <Figure />
+            {/*<Figure/>*/}
         </div>
 
-        {!isEmpty(latest) && <LatestDownloadButton apkList={versions} />}
+        {!isEmpty(latest) && <LatestDownloadButton apkList={versions}/>}
 
         {!disabled && (
             <UploadApkButton
@@ -57,7 +57,7 @@ AboutSection.propTypes = {
     versions: PropTypes.array,
 }
 
-export const HeaderContent = ({ text }) => (
+export const HeaderContent = ({text}) => (
     <section className={classnames(styles.appCardSection)}>
         <div>
             <h2 className={styles.appCardName}>{text}</h2>
