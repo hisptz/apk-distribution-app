@@ -33,7 +33,7 @@ export const AboutSection = ({
         </div>
 
         <div>
-            {/*<Figure/>*/}
+            <Figure/>
         </div>
 
         {!isEmpty(latest) && <LatestDownloadButton apkList={versions}/>}
